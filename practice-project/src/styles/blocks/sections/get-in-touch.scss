@@ -1,0 +1,28 @@
+.get-in-touch {
+  @include pageGrid;
+
+  &__info {
+    grid-column: 1/-1;
+
+    @include onTablet {
+      grid-column: 1/4;
+    }
+
+    @include onDesktop {
+      grid-column: 1/6;
+    }
+  }
+
+  &__form {
+    margin-top: 20px;
+    grid-column: 1/-1;
+
+    @include onTablet {
+      grid-column: 4/7;
+    }
+
+    @include onDesktop {
+      grid-column: 7/13;
+    }
+  }
+}

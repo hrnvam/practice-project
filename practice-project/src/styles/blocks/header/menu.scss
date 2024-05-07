@@ -1,0 +1,19 @@
+.menu {
+  height: 100vh;
+  background-color: #000;
+  z-index: 1;
+  overflow: auto;
+  background-image: linear-gradient(to right, rgba(9, 5, 47, 0) 0%, rgba(109, 149, 252, .25) 100%);
+
+  &__content {
+    @include contentPaddingInline;
+  }
+
+  &__nav {
+    margin-bottom: 32px;
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+}

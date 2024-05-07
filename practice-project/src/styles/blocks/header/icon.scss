@@ -1,0 +1,27 @@
+.icon {
+  @include hover(transform, scale(1.1));
+  display: block;
+  height: 24px;
+  width: 24px;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include onTablet() {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--menu {
+    background-image: url(../images/icons/icon-menu.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-menu-hover.svg);
+    }
+  }
+
+  &--close {
+    background-image: url(../images/icons/icon-close.svg);
+  }
+}

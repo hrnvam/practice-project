@@ -1,0 +1,61 @@
+.page {
+  min-width: 320px;
+  font-family: Poppins, serif;
+  color: $main-text-color;
+  background: #000;
+
+  font-size: 16px;
+
+  @include onTablet {
+    font-size: 21px;
+  }
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    max-width: 2000px;
+  }
+  
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    opacity: 0;
+    transition: all $effect-duration;
+    transform: translateX(-100%);
+    pointer-events: none;
+    
+    &:target {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
+  &__button {
+    color: #fff;
+    background: transparent;
+    border: 3px solid $main-accent-color;
+    padding-inline: 20px;
+    padding-block: 6px;
+    margin-block: 16px;
+    font-size: 15px;
+    cursor: pointer;
+
+    @include onTablet {
+      padding-inline: 25px;
+      padding-block: 10px;
+      font-size: 17px;
+    }
+  }
+}
+
+a {
+  @include hover(transform, scale(1.1));
+}

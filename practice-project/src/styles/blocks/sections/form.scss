@@ -1,0 +1,58 @@
+.form {
+  @include central;
+  flex-direction: column;
+  width: object-fit;
+  gap: 16px;
+  border-radius: 34px;
+  padding: 10px;
+  background-image: linear-gradient(to top, rgba(9, 5, 47, 0) 0%, rgba(109, 149, 252, .25) 100%);
+
+  & > label{
+    width: 90%;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 8.5%;
+  }
+
+  &__input {
+    width: 90%;
+    border: 1px solid #fff;
+    color: #fff;
+    line-height: 48px;
+    background-color: transparent;
+    font-family: Poppins, serif;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    line-height: 48px;
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-family: Poppins, serif;
+    resize: none;
+    color: #fff;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    width: fit-content;
+    padding: 10px;
+    margin-top: 16px;
+    color: #000;
+    background-color: $main-accent-color;
+  }
+  
+  &__wrapper {
+    margin: auto;
+    @include hover(transform, scale(1.05));
+  }
+}

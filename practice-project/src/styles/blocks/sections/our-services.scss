@@ -1,0 +1,44 @@
+.our-services {
+  @include pageGrid;
+  justify-content: space-between;
+  margin-block: 60px;
+
+  &__content {
+    height: 100%;
+    @include central;
+    justify-content: space-between;
+    gap: 20px;
+    grid-column: 1/-1;
+
+    @include onTablet {
+      align-items: left;
+      grid-column: 1/4;
+    }
+
+    @include onDesktop {
+      grid-column: 1/7;
+    }
+  }
+
+  &__services {
+    grid-column: 1/-1;
+
+    @include onTablet {
+      grid-column: 4/7;
+    }
+
+    @include onDesktop {
+      grid-column: 7/13;
+    }
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3px;
+    }
+
+    @include onDesktop {
+      grid-gap: 20px;
+    }
+  }
+}

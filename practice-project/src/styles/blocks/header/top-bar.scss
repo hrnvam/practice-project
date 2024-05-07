@@ -1,0 +1,33 @@
+.top-bar {
+  &__wrapper {
+    @include contentPaddingInline;
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__logo {
+    @include hover(transform, scale(1.1));
+
+    &-name {
+      text-transform: uppercase;
+      font-size: 25px;
+      font-weight: 700;
+      color: $main-accent-color;
+
+      @include onTablet() {
+        font-size: 30px;
+      }
+
+      @include onDesktop() {
+        font-size: 35px;
+      }
+    }
+
+    &-tagline {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

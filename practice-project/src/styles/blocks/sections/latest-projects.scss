@@ -1,0 +1,51 @@
+.latest-project {
+  @include central;
+
+  &__title {
+    align-self: center;
+    text-align: center; 
+    max-width: 680px;
+    margin: 20px auto;
+
+    &-main {
+      font-size: 30px;
+
+      @include onTablet {
+        font-size: 48px;
+      }
+
+      & > span {
+        color: $main-accent-color;
+      }
+    }
+
+    &-sub {
+      color: $main-accent-color;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 20%;
+        height: 3px;
+        background-color: $main-accent-color;
+        border-radius: 15px;
+        background-color: #fff;
+      }
+
+      &::before {
+        left: 16%;
+      }
+
+      &::after {
+        right: 16%;
+      }
+
+      @include onTablet {
+        font-size: 21px;
+      }
+    }
+  }
+}

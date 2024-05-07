@@ -1,0 +1,33 @@
+.card {
+  margin: 10px;
+  @include central;
+  flex-direction: column;
+  min-width: 120px;
+  background-size: auto;
+  background: rgba(109, 149, 252, .12);
+  @include hover(transform, scale(1.1));
+
+  &__title {
+    text-transform: uppercase;
+    color: $main-accent-color;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 12px;
+    width: 60%;
+    color: #fff;
+    text-align: center;
+
+    @include onTablet {
+      width: 80%;
+      font-size: 10px;
+    }
+
+    @include onTablet {
+      font-size: 12px;
+    }
+  }
+}

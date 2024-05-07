@@ -1,0 +1,89 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include onTablet {
+    gap: 33px;
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 20px;
+
+    & > span {
+      color: $main-accent-color;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 30%;
+      bottom: -10px;
+      border-radius: 15px;
+      background-color: #fff;
+
+      @include onTablet {
+        bottom: -15px;
+      }
+    }
+
+    @include onTablet {
+      font-size: 35px;
+    }
+
+    @include onDesktop {
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    text-align: justify;
+
+    @include onDesktop {
+      font-size: 21px;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    &-img {
+      float: left;
+      margin-right: 10px;
+      width: 26px;
+      height: 40px;
+
+      @include onTablet {
+        width: 32px;
+        height: 45px;
+        margin-right: 20px;
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+
+      @include onDesktop {
+        font-size: 21px;
+      }
+    }
+
+    &-text {
+      font-size: 13px;
+      color: $main-accent-color;
+
+      @include onDesktop {
+        font-size: 16px;
+      }
+    }
+  }
+}

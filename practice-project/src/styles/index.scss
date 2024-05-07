@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'utils/mixin';
+
+@import 'reset';
+@import 'blocks/page';
+@import 'blocks/header/header';
+@import 'blocks/header/top-bar';
+@import 'blocks/header/icon';
+@import 'blocks/header/title';
+@import 'blocks/header/menu';
+@import 'blocks/header/nav';
+@import 'blocks/sections/section';
+@import 'blocks/sections/about-us';
+@import 'blocks/sections/our-services';
+@import 'blocks/sections/description';
+@import 'blocks/sections/card';
+@import 'blocks/sections/award';
+@import 'blocks/sections/achievement';
+@import 'blocks/sections/latest-projects';
+@import 'blocks/sections/carousel';
+@import 'blocks/sections/why-us';
+@import 'blocks/sections/comment';
+@import 'blocks/sections/review';
+@import 'blocks/sections/get-in-touch';
+@import 'blocks/sections/info';
+@import 'blocks/sections/form';
+@import 'blocks/footer';

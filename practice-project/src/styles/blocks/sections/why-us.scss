@@ -1,0 +1,114 @@
+.why-us {
+  margin-block: 80px;
+  @include pageGrid;
+
+  &__wrapper-title {
+    height: 100%;
+    grid-column: 1/-1;
+
+    @include onTablet {
+      grid-column: 2/6;
+    }
+
+    @include onDesktop {
+      grid-column: 1/8;
+    }
+  }
+
+  &__title {
+    @include central;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    &-over {
+      position: relative;
+      width: fit-content;
+      text-transform: uppercase;
+      
+      @include onTablet {
+        align-self: start;
+        font-size: 21px;
+      }
+
+      &::after {
+        margin: auto;
+        display: block;
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: -3px;
+        border-radius: 15px;
+        background-color: $main-accent-color;
+      }
+    }
+
+    &-main {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
+
+      & > span {
+        color: $main-accent-color;
+      }
+
+      @include onTablet {
+        font-size: 35px;
+        text-align: left;
+      }
+
+      @include onDesktop {
+        font-size: 48px;
+      }
+    }
+
+    &-link {
+      align-self: center;
+
+      @include onTablet {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 1/-1;
+    font-size: 16px;
+    
+    @include onTablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      grid-column: 1/7;
+    }
+
+    @include onDesktop {
+      font-size: 21px;
+      grid-column: 8/-1;
+      flex-direction: column;
+    }
+
+    &-text,
+    &-list {
+      flex: 1;
+      font-weight: 300;
+    }
+
+    &-text {
+      margin: 0;
+      text-align: justify;
+    }
+
+    &-list {
+      margin-block: 10px;
+      padding-inline: 20px;
+      list-style-image: url(../images/icons/list-icon.svg);
+
+      @include onTablet {
+        margin-block: 0;
+      }
+    }
+  }
+}

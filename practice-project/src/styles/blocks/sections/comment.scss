@@ -1,0 +1,41 @@
+.comment {
+  margin-block: 60px;
+  display: flex;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include central;
+  }
+
+  @include onDesktop {
+    display: flex;
+    align-items: center;
+
+    &__bg-img-1 {
+      height: 70vh;
+      background-image: url(../images/review/bg1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+      flex: 1;
+    }
+
+    &__content {
+      flex: 2;
+      padding-inline: 0;
+      display: flex;
+      flex-direction: column;
+      @include central;
+    }
+
+    &__bg-img-2 {
+      height: 70vh;
+      background-image: url(../images/review/bg2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 1;
+      background-position: left;
+    }
+  }
+}

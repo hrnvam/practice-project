@@ -1,0 +1,113 @@
+.container {
+  height: 350px;
+  display: grid;
+  grid-template-rows: 300px 50px;
+  grid-template-columns: 1fr 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+
+  @include onTablet {
+    height: 580px;
+    grid-template-rows: 510px 70px;
+  }
+
+  @include onDesktop {
+    height: 700px;
+    grid-template-rows: 630px 70px;
+  }
+}
+
+#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  --items: 3;
+  --middle: 2;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  background: #000;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+
+  @include onTablet {
+    width: 500px;
+  }
+
+  @include onDesktop {
+    width: 650px;
+  }
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background: url(../images/latest-project/latest-project__1.png);
+  background-size: cover;
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background: url(../images/latest-project/latest-project__2.png);
+  background-size: cover;
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background: url(../images/latest-project/latest-project__3.png);
+  background-size: cover;
+}
+
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ #carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ #carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ #carousel {
+  --position: 3;
+}
+
+input[type=radio] {
+  border: 1px solid #fff;
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+
+input[type=radio]:checked {
+  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+  background-size: 9px 9px;
+}
+
+input[type=radio]:focus {
+  outline-color: transparent;
+}

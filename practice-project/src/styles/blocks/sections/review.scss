@@ -1,0 +1,121 @@
+.review {
+  &__title {
+    &-main {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      position: relative;
+  
+      & > span {
+        color: $main-accent-color;
+      }
+  
+      @include onTablet {
+        font-size: 36px;
+      }
+  
+      @include onTablet {
+        font-size: 48px;
+      }
+
+      &::after {
+        margin: auto;
+        display: block;
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        bottom: 3px;
+        border-radius: 15px;
+        background-color: $main-accent-color;
+        align-self: center;
+        left: 25%;
+        
+        @include onTablet {
+          left: 30%;
+          width: 40%;
+        }
+      }
+    }
+
+    &-over {
+      text-align: center;
+
+      @include onTablet {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__wrapper {
+    min-width: fit-content;
+    margin-top: 20px;
+    margin-inline: 20px;
+    border-radius: 38px;
+    padding: 18px 23px;
+    background-image: linear-gradient(to top, rgba(9, 5, 47, 0) 0%, rgba(109, 149, 252, .25) 100%);
+    margin-bottom: 20px;
+
+    @include onTablet {
+      margin-top: 40px;
+      margin-inline: 100px;
+      padding: 22px;
+      margin-bottom: 43px;
+    }
+
+    @include onDesktop {
+      padding: 30px;
+      margin-bottom: 43px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    letter-spacing: 4%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: justify;
+
+    @include onTablet {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__customer {
+    display: flex;
+    align-items: flex-end;
+
+    &-img {
+      width: 63px;
+      height: 63px;
+      margin-right: 10px;
+      float: left;
+
+      @include onTablet {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 700;
+
+      @include onDesktop {
+        font-size: 21px;
+      }
+    }
+
+    &-gmail {
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      color: $main-accent-color;
+    }
+  }
+}
