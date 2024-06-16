@@ -1365,13 +1365,13 @@ input[type="radio"]:focus {
 .info__link-img {
   float: left;
   width: 26px;
-  height: 40px;
+  height: 35px;
   margin-right: 10px;
 }
 
 @media (width >= 576px) {
   .info__link-img {
-    width: 32px;
+    width: 35px;
     height: 45px;
     margin-right: 20px;
   }
